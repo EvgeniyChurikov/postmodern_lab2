@@ -5,11 +5,11 @@
 
 class Sorter {
 private:
-    std::vector<int> vec;
+    std::vector<int> vec{};
 
     void quick_sort_recursive(int begin, int end);
 public:
-    Sorter();
+    Sorter() = default;
 
     explicit Sorter(std::vector<int> v);
 
@@ -20,8 +20,6 @@ public:
     void insertion_sort();
 
     void quick_sort();
-
-    void randomize();
 };
 
 #endif //POSTMODERN_LAB2_SORTER_H

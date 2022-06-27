@@ -1,11 +1,4 @@
 #include "Sorter.h"
-#include <cstdlib>
-#include <ctime>
-#include <utility>
-
-Sorter::Sorter() {
-    srand(time(nullptr));
-}
 
 Sorter::Sorter(std::vector<int> v) {
     vec = std::move(v);
@@ -33,13 +26,7 @@ void Sorter::insertion_sort() {
 }
 
 void Sorter::quick_sort() {
-    quick_sort_recursive(0, vec.size() - 1);
-}
-
-void Sorter::randomize() {
-    for (int &a: vec) {
-        a = rand() % vec.size();
-    }
+    quick_sort_recursive(0, (int)vec.size() - 1);
 }
 
 void Sorter::quick_sort_recursive(int begin, int end) {
